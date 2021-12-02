@@ -1,7 +1,7 @@
 #!/bin/bash 
 wall "	#Architecture: $(uname -a)
 	#CPU physical: $(cat /proc/cpuinfo | grep "physical id" |  uniq | wc -l)
-	#vCPU: $(grep "^processor" /proc/cpunifo | wc -l)
+	#vCPU: $(grep "^processor" /proc/cpuinfo | wc -l)
 	#Memory Usage: $(free -m | grep Mem | awk '{printf"%d/%dMB (%.2f%%)\n", $3, $2, $3/$2 * 100}')
 	#Disk Usage: $(df -h |awk NR==4'{printf "%d/%dGb (%s)",$3,$2,$5}')
 	#CPU load: $(mpstat | grep all | awk '{printf "%.2f%%\n", 100-$13}')
